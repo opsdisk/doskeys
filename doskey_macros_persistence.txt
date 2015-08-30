@@ -1,0 +1,1 @@
+reg add "hklm\software\microsoft\command processor" /v autorun /t reg_expand_sz /d "doskey /listsize=999 /macrofile=c:\users\opsdisk\doskey_macros.txt" /f
