@@ -38,6 +38,9 @@ The first step is to create a text file of your macros, and save it as whatever 
     mv=move $*
     ifconfig=ipconfig $*
     macros=doskey /macros
+    ip=powershell -noni -nop -ep bypass -c "$c=new-object System.Net.WebClient;$e=$c.DownloadString('http://icanhazip.com');write-host $e"
+    ..=cd ..
+    home=cd %USERPROFILE%
 
 Most of them should be self-explanatory...play around with them to see how they work. Just like with the BASH aliases, `$1` represents the first user-defined argument, `$*` represents all the user-defined arguments, and `$t` is used to chain commands (like `&` on the command line).  More details and options can be found here: https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/doskey.mspx?mfr=true
 
