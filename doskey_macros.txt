@@ -20,3 +20,4 @@ macros=doskey /macros
 ip=powershell -noni -nop -ep bypass -c "$c=new-object System.Net.WebClient;$e=$c.DownloadString('http://icanhazip.com');write-host $e"
 ..=cd ..
 home=cd %USERPROFILE%
+pepcheck=python -m flake8 $1 --ignore=E265,E501,W291,W293  
